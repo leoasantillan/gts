@@ -68,3 +68,19 @@
 - Keep dependencies minimal and up-to-date
 - Prefer Nuxt modules over generic packages when available
 - Document any new dependencies in commit messages
+
+## Pull Request Process
+When asked to "raise a PR" or "create a pull request", follow this complete workflow:
+
+1. **Save All Changes First** - Ensure all modified files are saved in the editor
+2. **Check Git Status** - Run `git status` to see what changes exist
+3. **Add Changes** - Stage all relevant files with `git add`
+4. **Commit Changes** - Create a descriptive commit message using conventional commits format
+5. **Create Branch** - Create a new feature branch with descriptive name (e.g., `feature/add-authentication`, `docs/improve-readme`)
+6. **Push Branch** - Push the branch to remote with `git push -u origin <branch-name>`
+7. **Create PR** - Use `gh pr create` with detailed title and description explaining:
+   - What changes were made
+   - Why they were made
+   - Any relevant context or testing notes
+
+**Important**: Never create incomplete PRs. Always ensure all work is committed and pushed before creating the PR.
