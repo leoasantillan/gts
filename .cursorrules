@@ -22,6 +22,13 @@
 - Use server-side rendering (SSR) by default
 - Utilize Nuxt's built-in SEO and meta management
 
+### Project Structure (CRITICAL)
+- **DO NOT create or use `app/app.vue`** - This project uses layout-based routing
+- Use `layouts/default.vue` for the main layout with navigation and structure
+- Pages in `/pages` directory automatically use the default layout
+- Layout contains `<slot />` where page content is rendered
+- This structure ensures proper routing and content display
+
 ### Styling
 - Use Tailwind CSS for all styling
 - Follow Tailwind utility-first approach
