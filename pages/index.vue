@@ -13,7 +13,10 @@
           <span class="inline-flex items-center rounded-md bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 px-3 py-1 text-sm">TypeScript</span>
           <span class="inline-flex items-center rounded-md bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 px-3 py-1 text-sm">Tailwind CSS</span>
         </div>
-        <div class="mt-10 flex gap-3">
+        <div class="mt-10 flex flex-wrap gap-3">
+          <NuxtLink to="/early-signup" class="inline-flex items-center rounded-md bg-indigo-600 text-white px-4 py-2 text-sm font-medium hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600">
+            Join Early Access
+          </NuxtLink>
           <NuxtLink to="/about" class="inline-flex items-center rounded-md bg-gray-900 text-white px-4 py-2 text-sm font-medium hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">
             Learn more
           </NuxtLink>

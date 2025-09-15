@@ -77,6 +77,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: 'Home', to: '/' },
+  { label: 'Early Signup', to: '/early-signup' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' }
 ]
