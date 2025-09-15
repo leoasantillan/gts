@@ -6,7 +6,6 @@ export interface EarlySignupForm {
 export interface EarlySignupState {
   form: EarlySignupForm
   isLoading: boolean
-  isSuccess: boolean
   errors: {
     name: string | null
     email: string | null
