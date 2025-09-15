@@ -8,7 +8,6 @@ export const useEarlySignupStore = defineStore('earlySignup', {
       email: ''
     },
     isLoading: false,
-    isSuccess: false,
     errors: {
       name: null,
       email: null
@@ -60,8 +59,11 @@ export const useEarlySignupStore = defineStore('earlySignup', {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000))
         
-        this.isSuccess = true
         this.isLoading = false
+        
+        // Navigate to thank you page after successful submission
+        await navigateTo('/thank-you')
+        
         return true
       } catch (error) {
         this.isLoading = false
@@ -73,7 +75,6 @@ export const useEarlySignupStore = defineStore('earlySignup', {
       this.form.name = ''
       this.form.email = ''
       this.isLoading = false
-      this.isSuccess = false
       this.errors.name = null
       this.errors.email = null
     }

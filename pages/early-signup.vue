@@ -9,8 +9,7 @@
 
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 pb-16">
       <div class="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
-        <div v-if="!store.isSuccess">
-          <h2 class="text-xl font-semibold mb-6">Join the Early Access List</h2>
+        <h2 class="text-xl font-semibold mb-6">Join the Early Access List</h2>
           
           <form @submit.prevent="handleSubmit" class="space-y-4">
             <div>
@@ -83,38 +82,6 @@
               </button>
             </div>
           </form>
-        </div>
-
-        <!-- Success State -->
-        <div v-else class="text-center py-8">
-          <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-green-900/20 mb-4">
-            <svg class="h-8 w-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-            You're on the list!
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">
-            Thank you for your interest, {{ store.form.name }}. We'll notify you at {{ store.form.email }} as soon as we launch.
-          </p>
-          <div class="space-y-3">
-            <button
-              @click="store.reset"
-              class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-2 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              Sign up another person
-            </button>
-            <div>
-              <NuxtLink
-                to="/"
-                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 text-sm font-medium transition-colors"
-              >
-                ← Back to homepage
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Additional Information -->
@@ -176,10 +143,6 @@ const handleSubmit = async () => {
   }
 }
 
-// Reset store on page leave to ensure clean state
-onUnmounted(() => {
-  if (!store.isSuccess) {
-    store.reset()
-  }
-})
+// Note: Store reset removed to prevent clearing data before thank-you page loads
+// Store will be reset when user explicitly chooses to sign up another person
 </script>
