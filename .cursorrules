@@ -1,0 +1,63 @@
+# GTS Project - Cursor Rules
+
+## Project Setup
+- This is a Nuxt 3 project with TypeScript and Tailwind CSS
+- Use Node.js v22 (managed via nvm - see .nvmrc file)
+- Package manager: npm (not yarn or pnpm)
+- Always run `nvm use` before working on this project
+
+## Development Guidelines
+
+### TypeScript
+- Strict TypeScript mode is enabled
+- Type checking is enforced during build
+- Always provide proper type annotations
+- Use interfaces for object shapes
+- Prefer type-safe patterns
+
+### Nuxt 3 Conventions
+- Use Nuxt 3 composition API patterns
+- Leverage auto-imports for components, composables, and utilities
+- Follow Nuxt directory structure conventions
+- Use server-side rendering (SSR) by default
+- Utilize Nuxt's built-in SEO and meta management
+
+### Styling
+- Use Tailwind CSS for all styling
+- Follow Tailwind utility-first approach
+- Avoid custom CSS unless absolutely necessary
+- Use Tailwind's responsive design utilities
+- Prefer Tailwind's semantic color palette
+
+### Code Quality
+- Keep components small and focused
+- Use descriptive variable and function names
+- Follow Vue 3 Composition API best practices
+- Implement proper error handling
+- Add JSDoc comments for complex functions
+
+### File Organization
+- Components in `/components` directory
+- Pages in `/pages` directory (auto-routed)
+- Layouts in `/layouts` directory
+- Composables in `/composables` directory
+- Server API routes in `/server/api` directory
+- Types in `/types` directory
+
+### Performance
+- Optimize for Core Web Vitals
+- Use Nuxt's built-in image optimization
+- Implement proper lazy loading
+- Minimize bundle size
+- Use server-side data fetching when appropriate
+
+### Commands
+- Development: `npm run dev`
+- Build: `npm run build`
+- Preview: `npm run preview`
+- Type check: `npm run postinstall` (generates types)
+
+## Dependencies
+- Keep dependencies minimal and up-to-date
+- Prefer Nuxt modules over generic packages when available
+- Document any new dependencies in commit messages
